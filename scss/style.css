@@ -103,6 +103,20 @@ body {
 #item1 .card-item__message {
   color: #cfcfcf;
 }
+#item1 .bg-img {
+  background-image: url("./../images/bg-pattern-quotation.svg");
+  position: absolute;
+  width: 6.5rem;
+  height: 6.375rem;
+  right: 7%;
+  top: 0;
+}
+@media (min-width: 90em) {
+  #item1 .bg-img {
+    right: 15%;
+    top: 0;
+  }
+}
 @media (min-width: 90em) {
   #item1 {
     grid-area: id1;
@@ -161,21 +175,6 @@ body {
   }
   #item5 .card-item__header-wrapper {
     grid-template-columns: 0.3fr 1fr;
-  }
-}
-
-.bg-img {
-  background-image: url("./../images/bg-pattern-quotation.svg");
-  position: absolute;
-  width: 6.5rem;
-  height: 6.375rem;
-  right: 7%;
-  top: 0;
-}
-@media (min-width: 90em) {
-  .bg-img {
-    right: 15%;
-    top: 0;
   }
 }
 

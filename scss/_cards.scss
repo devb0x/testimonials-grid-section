@@ -95,6 +95,20 @@
     color: $lightGray;
   }
 
+  .bg-img {
+    background-image: url("./../images/bg-pattern-quotation.svg");
+    position: absolute;
+    width: 6.5rem;
+    height: 6.375rem;
+    right: 7%;
+    top: 0;
+
+    @include breakpoint-up(desktop){
+      right: 15%;
+      top: 0;
+    }
+  }
+
   @include breakpoint-up(desktop){
     grid-area: id1;
 
@@ -156,16 +170,4 @@
   }
 }
 
-.bg-img {
-  background-image: url("./../images/bg-pattern-quotation.svg");
-  position: absolute;
-  width: 6.5rem;
-  height: 6.375rem;
-  right: 7%;
-  top: 0;
 
-  @include breakpoint-up(desktop){
-    right: 15%;
-    top: 0;
-  }
-}
