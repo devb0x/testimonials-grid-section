@@ -2,9 +2,19 @@
 @import "mixins";
 
 .cards-wrapper {
-  display: grid;
   max-width: 20.438rem;
   margin: auto;
+
+  @include breakpoint-up(desktop){
+    max-width: 1110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px 30px;
+    grid-template-areas:
+    "id1 id1 id2 id5"
+    "id3 id4 id4 id5";
+  }
 
   .card-item {
     display: grid;
@@ -17,12 +27,18 @@
     border-radius: 0.5rem;
     box-shadow: 2.5rem 3.75rem 3.125rem -2.938rem rgba(72, 85, 106, 0.247378);
 
+    @include breakpoint-up(desktop){
+      margin: 0;
+    }
+
     &__header-wrapper {
       grid-area: 1 / 1 / 2 / 7;
       display: grid;
       grid-template-columns: 0.20fr 1fr;
       grid-column-gap: 0;
       grid-row-gap: 0;
+
+      height: 28px;
 
       .card-item__author {
         display: grid;
@@ -73,24 +89,64 @@
 #item1 {
   background-color: $moderateViolet;
   color: $white;
+
+  @include breakpoint-up(desktop){
+    grid-area: id1;
+
+    .card-item__header-wrapper {
+      grid-template-columns: 0.1fr 1fr;
+    }
+  }
 }
 
 #item2 {
   background-color: $veryDarkGrayishBlue;
   color: $white;
+
+  @include breakpoint-up(desktop){
+    grid-area: id2;
+
+    .card-item__header-wrapper {
+      grid-template-columns: 0.30fr 1fr;
+    }
+  }
 }
 
 #item3 {
   background-color: $white;
   color: $veryDarkGrayishBlue;
+
+  @include breakpoint-up(desktop){
+    grid-area: id3;
+
+    .card-item__header-wrapper {
+      grid-template-columns: 0.30fr 1fr;
+    }
+  }
 }
 
 #item4 {
   background-color: $veryDarkBlackishBlue;
   color: $white;
+
+  @include breakpoint-up(desktop){
+    grid-area: id4;
+
+    .card-item__header-wrapper {
+      grid-template-columns: 0.1fr 1fr;
+    }
+  }
 }
 
 #item5 {
   background-color: $white;
   color: $veryDarkGrayishBlue;
+
+  @include breakpoint-up(desktop){
+    grid-area: id5;
+
+    .card-item__header-wrapper {
+      grid-template-columns: 0.30fr 1fr;
+    }
+  }
 }

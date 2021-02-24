@@ -17,4 +17,9 @@ body {
   font-size: $font-med;
   font-weight: $medium;
   background-color:$lightGrayishBlue;
+
+  @include breakpoint-up(desktop){
+    height: 100vh;
+    display: grid;
+  }
 }

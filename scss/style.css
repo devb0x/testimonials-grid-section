@@ -15,11 +15,26 @@ body {
   font-weight: 500;
   background-color: #ecf2f8;
 }
+@media (min-width: 90em) {
+  body {
+    height: 100vh;
+    display: grid;
+  }
+}
 
 .cards-wrapper {
-  display: grid;
   max-width: 20.438rem;
   margin: auto;
+}
+@media (min-width: 90em) {
+  .cards-wrapper {
+    max-width: 1110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px 30px;
+    grid-template-areas: "id1 id1 id2 id5" "id3 id4 id4 id5";
+  }
 }
 .cards-wrapper .card-item {
   display: grid;
@@ -32,12 +47,18 @@ body {
   border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3.125rem -2.938rem rgba(72, 85, 106, 0.247378);
 }
+@media (min-width: 90em) {
+  .cards-wrapper .card-item {
+    margin: 0;
+  }
+}
 .cards-wrapper .card-item__header-wrapper {
   grid-area: 1/1/2/7;
   display: grid;
   grid-template-columns: 0.2fr 1fr;
   grid-column-gap: 0;
   grid-row-gap: 0;
+  height: 28px;
 }
 .cards-wrapper .card-item__header-wrapper .card-item__author {
   display: grid;
@@ -77,25 +98,65 @@ body {
   background-color: #7541c8;
   color: white;
 }
+@media (min-width: 90em) {
+  #item1 {
+    grid-area: id1;
+  }
+  #item1 .card-item__header-wrapper {
+    grid-template-columns: 0.1fr 1fr;
+  }
+}
 
 #item2 {
   background-color: #48556a;
   color: white;
+}
+@media (min-width: 90em) {
+  #item2 {
+    grid-area: id2;
+  }
+  #item2 .card-item__header-wrapper {
+    grid-template-columns: 0.3fr 1fr;
+  }
 }
 
 #item3 {
   background-color: white;
   color: #48556a;
 }
+@media (min-width: 90em) {
+  #item3 {
+    grid-area: id3;
+  }
+  #item3 .card-item__header-wrapper {
+    grid-template-columns: 0.3fr 1fr;
+  }
+}
 
 #item4 {
   background-color: #19212e;
   color: white;
 }
+@media (min-width: 90em) {
+  #item4 {
+    grid-area: id4;
+  }
+  #item4 .card-item__header-wrapper {
+    grid-template-columns: 0.1fr 1fr;
+  }
+}
 
 #item5 {
   background-color: white;
   color: #48556a;
+}
+@media (min-width: 90em) {
+  #item5 {
+    grid-area: id5;
+  }
+  #item5 .card-item__header-wrapper {
+    grid-template-columns: 0.3fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
